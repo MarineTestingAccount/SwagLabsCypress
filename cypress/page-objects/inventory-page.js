@@ -17,6 +17,10 @@ export class InventoryPage {
         return cy.url();
     }
 
+    getTitleText(){
+        return cy.get('[class = "title"]')
+    }
+
     addItemProductIntoCart() {
         this.getListOfBtns(randomIndex).click()
     }

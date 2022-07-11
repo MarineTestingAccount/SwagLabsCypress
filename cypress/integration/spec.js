@@ -6,6 +6,7 @@ import {InventoryPage} from "../page-objects/inventory-page";
 import {InventoryPageAssertion} from "./assertions/inventoryPageAssertion";
 import {CartPage} from "../page-objects/cart-page";
 import {CartPageAssertion} from "./assertions/cartPageAssertion";
+import {Logout} from "../page-objects/logout";
 
 describe('Login into SwagLab, add product into the cart, delete the product, then Log out', () => {
     const loginPage = new LoginPage()
@@ -14,6 +15,7 @@ describe('Login into SwagLab, add product into the cart, delete the product, the
     const inventoryPageAssertion = new InventoryPageAssertion()
     const cartPage = new CartPage()
     const cartPageAssertion = new CartPageAssertion()
+    const logout = new Logout()
 
     beforeEach(() => {
         loginPage.navigate()
@@ -36,6 +38,9 @@ describe('Login into SwagLab, add product into the cart, delete the product, the
 
         cartPage.clickOnRemoveBtn()
         cartPageAssertion.isRemovedInventoryItem()
+
+        logout.clickOnMenuBtn()
+        logout.clickOnLogoutBtn()
 
 
     })
