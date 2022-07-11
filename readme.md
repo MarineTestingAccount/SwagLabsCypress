@@ -1,6 +1,6 @@
-##Swag Labs Cypress Homework
+## Swag Labs Cypress Homework
 
-###HomeTask
+### HomeTask
 
 
 .navigate to [Swag Labs](https://www.saucedemo.com/)
@@ -17,7 +17,7 @@
 
 .logout
 
-#Setup
+# Setup
 
 . Install [Node.js](https://nodejs.org/en/)
 
@@ -32,7 +32,7 @@
   ```
   npx cypress open
   ```
-###Used versions
+### Used versions
 . Cypress version: 9.7.0
 
 . Node.js version: v18.2.0
