@@ -7,6 +7,9 @@ export class LoginPage {
     navigate() {
         cy.visit('')
     }
+    getLoginPageUrl() {
+        return cy.url();
+    }
 
     getUserName() {
         return cy.get('[id = "user-name"]')
@@ -18,18 +21,6 @@ export class LoginPage {
 
     getLoginBtn() {
         return cy.get('[id = "login-button"]')
-    }
-
-    getLoginPageTitle() {
-        return cy.get('[class = "title"]')
-    }
-
-    getShoppingCart() {
-        return cy.get('[class = "shopping_cart_link"]')
-    }
-
-    getTitleText() {
-        return cy.get('[class = "title"]')
     }
 
     setUserName() {
@@ -49,5 +40,6 @@ export class LoginPage {
         this.setPassword()
         this.clickOnLoginBtn()
     }
+
 
 }
