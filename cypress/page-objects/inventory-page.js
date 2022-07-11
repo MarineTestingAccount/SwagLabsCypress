@@ -12,21 +12,21 @@ export class InventoryPage {
         ];
         return (listOfBtns[index].btn)
     }
+
     getInventoryPageUrl() {
         return cy.url();
     }
-    getTitleText(){
-        return cy.get('[class = "title"]')
-    }
-    addItemProductIntoCart(){
+
+    addItemProductIntoCart() {
         this.getListOfBtns(randomIndex).click()
     }
+
     getShoppingCart() {
         return cy.get('[class = "shopping_cart_link"]')
     }
-    clickOnCart(){
+
+    clickOnCart() {
         this.getShoppingCart().click()
     }
-
 
 }

@@ -7,6 +7,7 @@ export class LoginPage {
     navigate() {
         cy.visit('')
     }
+
     getLoginPageUrl() {
         return cy.url();
     }

@@ -1,17 +1,21 @@
-export class CartPage{
+export class CartPage {
     getCartPageUrl() {
         return cy.url();
     }
-    getTitleText(){
+
+    getTitleText() {
         return cy.get('[class = "title"]')
     }
+
     getInventoryItem() {
         return cy.get('.cart_item')
     }
-    getCartRemoveBtn(){
+
+    getCartRemoveBtn() {
         return cy.get('[class = "btn btn_secondary btn_small cart_button"]')
     }
-    clickOnRemoveBtn(){
+
+    clickOnRemoveBtn() {
         this.getCartRemoveBtn().click()
     }
 

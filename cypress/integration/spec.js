@@ -16,7 +16,7 @@ describe('Login into SwagLab, add product into the cart, delete the product, the
     const cartPageAssertion = new CartPageAssertion()
 
     beforeEach(() => {
-       loginPage.navigate()
+        loginPage.navigate()
     })
 
     it('should be able to login into SwagLabs app', () => {
@@ -25,6 +25,7 @@ describe('Login into SwagLab, add product into the cart, delete the product, the
 
         inventoryPageAssertion.verifyInventoryPageUrl()
         inventoryPageAssertion.verifyTitleText()
+        inventoryPageAssertion.isCartVisible()
         inventoryPage.addItemProductIntoCart()
         inventoryPage.clickOnCart()
 
@@ -35,8 +36,6 @@ describe('Login into SwagLab, add product into the cart, delete the product, the
 
         cartPage.clickOnRemoveBtn()
         cartPageAssertion.isRemovedInventoryItem()
-
-
 
 
     })
