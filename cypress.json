@@ -1,6 +1,6 @@
 {
+  "baseUrl": "https://www.saucedemo.com/",
   "chromeWebSecurity": false,
   "watchForFileChanges": false,
-  "defaultCommandTimeout":6000,
   "reporter": "cypress-multi-reporters"
 }
